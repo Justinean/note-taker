@@ -3,6 +3,7 @@ let noteText;
 let saveNoteBtn;
 let newNoteBtn;
 let noteList;
+let index;
 
 if (window.location.pathname === '/notes') {
   noteTitle = document.querySelector('.note-title');
@@ -157,9 +158,13 @@ const renderNoteList = async (notes) => {
   if (jsonNotes.length === 0) {
     noteListItems.push(createLi('No saved Notes', false));
   }
-
+  index = 1;
   jsonNotes.forEach((note) => {
     const li = createLi(note.title);
+    if (!note.id) {
+      note.id = index;
+      index++
+    }
     li.dataset.note = JSON.stringify(note);
 
     noteListItems.push(li);
