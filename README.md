@@ -8,26 +8,17 @@ It's a web application that allows a user to make and delete notes that are save
 
 # Table of Contents:
 
-- [Installation](#installation)
 - [Usage](#usage)
 - [License](#license)
 - [Contact me](#contact-me)
 
-# Installation:
-
-1. g
-
 # Usage:
 
-Head to here
+Head to [here](https://note-taker-web-applic.herokuapp.com/) and click on "Get Started". For each note there must be a title and text for each note before you can save a note.
 
-# Contribution:
+![Picture of the starting page](./assets/start.png)
+![Picture of the page with notes already created](./assets/notes.png)
 
-j
-
-# Tests:
-
-j
 
 # License:
 
