@@ -13,7 +13,6 @@ app.use(express.static(__dirname + '/public'));
 app.get('/notes', function(req, res) {
     fs.readFile(`./public/notes.html`, (err, data) => {
         if (err) throw err;
-        res.writeHead("202", {'Content-Type': "text/html"});
         res.end(data);
     });
 });
@@ -27,7 +26,6 @@ app.get('/api/notes', (req, res) => {
 app.get('/assets/css/styles.css', function(req, res) {
     fs.readFile(`./public/assets/css/styles.css`, (err, data) => {
         if (err) throw err;
-        res.writeHead("202", {'Content-Type': "text/html"});
         res.end(data);
     });
 });
@@ -35,7 +33,6 @@ app.get('/assets/css/styles.css', function(req, res) {
 app.get('/assets/js/index.js', function(req, res) {
     fs.readFile(`./public/assets/js/index.js`, (err, data) => {
         if (err) throw err;
-        res.writeHead("202", {'Content-Type': "text/html"});
         res.end(data);
     });
 });
@@ -43,7 +40,6 @@ app.get('/assets/js/index.js', function(req, res) {
 app.get('/*', function(req, res) {
     fs.readFile(`./public/index.html`, (err, data) => {
         if (err) throw err;
-        res.writeHead("202", {'Content-Type': "text/html"});
         res.end(data);
     });
 });
@@ -53,7 +49,6 @@ app.post('/api/notes', function(req, res) {
 
     let data = fs.readFileSync('./db/db.json', (err, data) => {
         if (err) throw err;
-        res.writeHead("202", {'Content-Type': "text/html"});
         return data;
     });
     data = JSON.parse(data);
