@@ -2,7 +2,7 @@ const express = require('express');
 const fs = require('fs');
 
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 3001;
 let index = 1;
 let init = [{"title":"Test Title","text":"Test text"}];
 fs.writeFileSync('./db/db.json', JSON.stringify(init));
